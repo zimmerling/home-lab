@@ -80,3 +80,36 @@ variable "iscsi_chap_password" {
   sensitive   = true
   default     = ""
 }
+
+# Synology CSI Driver Configuration
+variable "synology_host" {
+  description = "Synology NAS IP address (Tailscale)"
+  type        = string
+  default     = "100.98.178.58"
+}
+
+variable "synology_dsm_port" {
+  description = "Synology DSM port (5000 for HTTP, 5001 for HTTPS)"
+  type        = number
+  default     = 5001
+}
+
+variable "synology_dsm_https" {
+  description = "Use HTTPS for DSM connection"
+  type        = bool
+  default     = true
+}
+
+variable "synology_dsm_username" {
+  description = "Synology DSM admin username for CSI driver"
+  type        = string
+  sensitive   = true
+  default     = ""
+}
+
+variable "synology_dsm_password" {
+  description = "Synology DSM admin password for CSI driver"
+  type        = string
+  sensitive   = true
+  default     = ""
+}

@@ -25,8 +25,8 @@ synology_iscsi_portal = "100.98.178.58:3260"
 # Secrets (DO NOT fill here - will be injected from Bitwarden via GitHub Actions)
 # For local testing, set via environment:
 #   export TF_VAR_tailscale_authkey="tskey-auth-..."
-#   export TF_VAR_iscsi_chap_username="k8suser"
-#   export TF_VAR_iscsi_chap_password="..."
+#   export TF_VAR_synology_dsm_username="admin"  # or dedicated CSI user
+#   export TF_VAR_synology_dsm_password="..."
 # tailscale_authkey = ""
-# iscsi_chap_username = ""
-# iscsi_chap_password = ""
+# synology_dsm_username = ""
+# synology_dsm_password = ""

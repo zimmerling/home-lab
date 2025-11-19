@@ -52,20 +52,11 @@ resource "helm_release" "cilium" {
     value = "10.0.0.0/8"
   }
 
-  # Enable Hubble for network observability (optional)
+  # Hubble disabled - causing startup issues
+  # Can be enabled later if needed for network observability
   set {
     name  = "hubble.enabled"
-    value = "true"
-  }
-
-  set {
-    name  = "hubble.relay.enabled"
-    value = "true"
-  }
-
-  set {
-    name  = "hubble.ui.enabled"
-    value = "true"
+    value = "false"
   }
 
   # Wait for Cilium to be ready before considering this complete
