@@ -35,3 +35,6 @@ Thumbs.db
 # Claude Code specific files
 .claude-code-instructions.md
 CLAUDE.md
+
+# Documentation (local only)
+docs/
